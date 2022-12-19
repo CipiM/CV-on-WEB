@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+<header>
+    <div class="container">
+
+        <img src="pngwin.png" alt="logo" width="100" height="50" class="logo">
+
+        <nav>
+            <ul>
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> Gallery </a> </li>
+                <li> <a href="#"> Contact </a> </li>
+                <li> <a href="#"> Forms </a> </li>
+
+
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<div class="cont">
+    <div class="title">Hello! Welcome to my site!</div>
+    <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" placeholder="Enter your first name" required th:field="*{firstName}">
+            </div>
+            <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" placeholder="Enter your last name" required th:field="*{lasttName}">
+            </div>
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your number" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Age</span>
+                <input type="text" placeholder="Enter your age" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Company</span>
+                <input type="text" placeholder="Enter your company" required>
+            </div>
+        </div>
+        <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Gender</span>
+            <div class="category">
+                <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                </label>
+                <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                </label>
+                <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="gender">Prefer not to say</span>
+                </label>
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Go to site">
+        </div>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <h3> Mihon Elvis Ciprian</h3>
+        <p>Life is good</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;12.12.2022 mC</p>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
