@@ -1,14 +1,79 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Personal Website </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-<h1>Result</h1>
-<p th:text="'Welcome to my site, ' + ${greeting.firstName}" />
-<p th:text="'Last Name: ' + ${greeting.lasttName}" />
 
-<a href="/greeting">Submit another message</a>
+<section class="hero">
+    <div class="main-width">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-m"></i>
+                <i class="fa-solid fa-e"></i>
+                <i class="fa-solid fa-c"></i>
+            </div>
+
+            <nav>
+                <div class="hamb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="/greeting">Forms</a></li>
+                    <li class="btn"><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="hero-text">
+                <h3 th:text="'Welcome to my site, ' + ${greeting.firstName} + ' ' + ${greeting.lasttName} +'!'"/>
+                <h1>I am <span class="input"> </span></h1>
+                <p> Use your head like a processor, not a hard drive!</p>
+                <div class="social">
+                    <a href="https://facebook.com/cipi.mihon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://digitalstation.workplace.com/" target="_blank"><i class="fa-brands fa-weebly"></i></i></a>
+                    <a href="https://www.instagram.com/cipi.mihon/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://ro.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <button type="button"> More About Me</button>
+            </div>
+
+            <div class="bottom">
+                <p> copyright &copy;12.12.2022 mC</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script type="text/javascript" src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var type = new Typed(".input", {
+        strings:["Mihon Elvis-Ciprian.","Mihon Elvis-Ciprian.","Java Developer.","Computer Science Teacher.","Robotics Engineer."],
+        typeSpeed: 70,
+        backSpeed:60,
+        loop:true
+    });
+</script>
 </body>
 </html>
